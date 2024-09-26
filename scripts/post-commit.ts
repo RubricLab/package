@@ -13,30 +13,39 @@ try {
 
 	const versionParts = packageJson.version.split('.').map(Number)
 	versionParts[2] += 1
-	const newVersion = versionParts.join('.')
-	packageJson.version = newVersion
+	packageJson.version = versionParts.join('.')
 
 	writeFileSync('package.json', `${JSON.stringify(packageJson, null, 2)}\n`)
 
+	const commitHash = spawnSync(['git', 'rev-parse', 'HEAD']).stdout.toString().trim()
+
 	const commitMessage = spawnSync(['git', 'log', '-1', '--pretty=%B']).stdout.toString().trim()
 
-	const date = new Date()
-	const formattedDate = date.toISOString().split('T')[0]
+	const commitDate = spawnSync(['git', 'log', '-1', '--pretty=%cd', '--date=short'])
+		.stdout.toString()
+		.trim()
 
-	const changelogEntry = `## [${newVersion}] - ${formattedDate}
+	let repositoryUrl = spawnSync(['git', 'config', '--get', 'remote.origin.url'])
+		.stdout.toString()
+		.trim()
 
-### Added
-- ${commitMessage}
+	if (repositoryUrl.endsWith('.git')) {
+		repositoryUrl = repositoryUrl.slice(0, -4)
+	}
+	if (repositoryUrl.startsWith('git@')) {
+		repositoryUrl = repositoryUrl.replace('git@', 'https://').replace(':', '/')
+	}
 
-`
+	const commitUrl = `${repositoryUrl}/commit/${commitHash}`
+
+	const changelogEntry = `- [${commitDate}] [${commitMessage}](${commitUrl})\n`
 
 	const changelogPath = 'CHANGELOG.md'
 	let changelogContent = ''
 	if (existsSync(changelogPath)) {
 		changelogContent = readFileSync(changelogPath, 'utf-8')
 	} else {
-		changelogContent =
-			'# Changelog\n\nAll notable changes to this project will be documented in this file.\n'
+		changelogContent = '# Changelog\n\n'
 	}
 
 	writeFileSync(changelogPath, `${changelogEntry}${changelogContent}`)
