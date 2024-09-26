@@ -1,0 +1,13 @@
+name: Release Package
+
+on:
+ push:
+  branches:
+   - main
+
+jobs:
+ release:
+  uses: rubriclab/package/workflow-templates/release-package.yml
+  with:
+   registry_url: 'https://registry.npmjs.org'
+   node_version: '20'

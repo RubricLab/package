@@ -5,14 +5,15 @@
 		"registry": "https://npm.pkg.github.com/"
 	},
 	"bin": {
-		"rubriclab-precommit": "./scripts/precommit.ts"
+		"rubriclab-precommit": "./scripts/precommit.ts",
+    "rubriclab-postcommit": "./scripts/postcommit.ts"
 	},
 	"private": false,
 	"simple-git-hooks": {
-		"pre-commit": "bun run precommit"
+		"pre-commit": "bun run ./scripts/precommit.ts",
+    "post-commit": "bun run ./scripts/postcommit.ts"
 	},
 	"scripts": {
-		"precommit": "bun run ./scripts/precommit.ts",
 		"postinstall": "bun run ./scripts/postinstall.ts",
 		"prepare": "bun run simple-git-hooks",
 		"bleed": "bunx npm-check-updates -u && bun i",
