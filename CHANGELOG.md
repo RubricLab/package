@@ -2,23 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.1220](https://github.com/RubricLab/rubric/compare/v0.0.1203...v0.0.1220) (2024-09-26)
+### [0.0.1223](https://github.com/RubricLab/rubric/compare/v0.0.1203...v0.0.1223) (2024-09-26)
 
-### [0.0.1215](https://github.com/RubricLab/rubric/compare/v0.0.1203...v0.0.1215) (2024-09-26)
+### [0.0.1219](https://github.com/RubricLab/rubric/compare/v0.0.1203...v0.0.1219) (2024-09-26)
 
-### [0.0.1213](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1213) (2024-09-26)
+### [0.0.1214](https://github.com/RubricLab/rubric/compare/v0.0.1206...v0.0.1214) (2024-09-26)
 
-### [0.0.1209](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1209) (2024-09-26)
+### 0.0.1203 (2024-09-26)
 
-### [0.0.1207](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1207) (2024-09-26)
+### [0.0.1211](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1211) (2024-09-26)
 
-### [0.0.1204](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1204) (2024-09-26)
+### [0.0.1208](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1208) (2024-09-26)
 
-### [0.0.1201](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1201) (2024-09-26)
+### [0.0.1205](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1205) (2024-09-26)
 
-### [0.0.1199](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1199) (2024-09-26)
+### [0.0.1202](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1202) (2024-09-26)
 
-### [0.0.1196](https://github.com/RubricLab/rubric/compare/v0.0.1186...v0.0.1196) (2024-09-26)
+### [0.0.1200](https://github.com/RubricLab/rubric/compare/v0.0.1189...v0.0.1200) (2024-09-26)
+
+### [0.0.1197](https://github.com/RubricLab/rubric/compare/v0.0.1186...v0.0.1197) (2024-09-26)
 
 ### [0.0.1193](https://github.com/RubricLab/rubric/compare/v0.0.119...v0.0.1193) (2024-09-26)
 
