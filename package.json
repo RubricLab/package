@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
@@ -8,9 +8,12 @@
 		"rubriclab-precommit": "./scripts/precommit.ts"
 	},
 	"private": false,
+	"simple-git-hooks": {
+		"precommit": "bun run precommit"
+	},
 	"scripts": {
-		"precommit": "bun scripts/precommit.ts",
-		"postinstall": "bun scripts/postinstall.ts",
+		"precommit": "bun run ./scripts/precommit.ts",
+		"postinstall": "bun run ./scripts/postinstall.ts",
 		"prepare": "bun run simple-git-hooks",
 		"bleed": "bunx npm-check-updates -u && bun i",
 		"format": "bunx biome format --write .",
