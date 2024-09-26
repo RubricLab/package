@@ -12,7 +12,7 @@ try {
 	pkgJson['simple-git-hooks'] = {
 		'pre-commit': 'bun run precommit',
 		'post-commit': 'bun run postcommit'
-	  }
+	}
 
 	pkgJson.scripts = pkgJson.scripts || {}
 	pkgJson.scripts.prepare = 'bun run simple-git-hooks'
