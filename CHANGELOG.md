@@ -2,25 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.1125](https://github.com/RubricLab/rubric/compare/v0.0.113...v0.0.1125) (2024-09-26)
+### [0.0.1127](https://github.com/RubricLab/rubric/compare/v0.0.126...v0.0.1127) (2024-09-26)
 
-### 0.0.126 (2024-09-26)
+### [0.0.1124](https://github.com/RubricLab/rubric/compare/v0.0.113...v0.0.1124) (2024-09-26)
 
-### [0.0.131](https://github.com/RubricLab/rubric/compare/v0.0.111...v0.0.131) (2024-09-26)
-
-### 0.0.113 (2024-09-26)
-
-### [0.0.127](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.127) (2024-09-26)
+### [0.0.130](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.130) (2024-09-26)
 
 ### 0.0.111 (2024-09-26)
 
-### [0.0.119](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.119) (2024-09-26)
+### [0.0.123](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.123) (2024-09-26)
 
-### [0.0.112](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.112) (2024-09-26)
+### 0.0.108 (2024-09-26)
 
-### [0.0.108](https://github.com/RubricLab/rubric/compare/v0.0.1056...v0.0.108) (2024-09-26)
+### [0.0.113](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.113) (2024-09-26)
 
-### 0.0.87 (2024-09-26)
+### [0.0.108](https://github.com/RubricLab/rubric/compare/v0.0.87...v0.0.108) (2024-09-26)
 
 ### [0.0.102](https://github.com/RubricLab/rubric/compare/v0.0.1066...v0.0.102) (2024-09-26)
 
