@@ -1,3 +1,13 @@
 {
-  "name": "@rubriclab/package"
+  "name": "@rubriclab/package",
+  "version": "0.0.0",
+  "bin": {
+    "rubriclab-precommit": "./scripts/precommit.ts"
+  },
+  "scripts": {
+    "postinstall": "bun ./scripts/postinstall.ts"
+  },
+  "dependencies": {
+    "simple-git-hooks": "^2.8.1"
+  }
 }
