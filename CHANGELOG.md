@@ -1,13 +1,2 @@
+- [2024-09-26] [cleanup changelog](https://github.com/RubricLab/package/commit/745b3ce1b24ce6c11673fa5aeb683eb68f4debdc)
 - [2024-09-26] [modify post-commit hook](https://github.com/RubricLab/package/commit/51edd9abd0e15583794677eb0785e5df88bb4bfe)
-## [0.0.1806] - 2024-09-26
-
-### Added
-- merge
-
-## [0.0.1805] - 2024-09-26
-
-### Added
-
-- ci
-
-- testing ci
