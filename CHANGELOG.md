@@ -1,3 +1,4 @@
+- [2024-09-26] [anotha](https://github.com/RubricLab/package/commit/b8eea72aaee463483a46b6f72fb5c6e1566e1658)
 - [2024-09-26] [anotha one](https://github.com/RubricLab/package/commit/9430475cb9b30d1943d6379af03ea08c037893a0)
 - [2024-09-26] [use passed token](https://github.com/RubricLab/package/commit/abe9acd4d65cd1cb40a3b4f4b65669da0aae9d39)
 - [2024-09-26] [check if build script](https://github.com/RubricLab/package/commit/048d2df8827c9bfcf8438034260ef69e732bce00)
