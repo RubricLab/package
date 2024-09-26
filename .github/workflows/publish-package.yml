@@ -7,7 +7,7 @@ on:
 
 jobs:
  release:
-  uses: rubriclab/package/workflow-templates/release-package.yml
-  with:
-   registry_url: 'https://registry.npmjs.org'
-   node_version: '20'
+  uses: rubriclab/package/.github/workflows/release-package.yml@main
+  secrets:
+   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
