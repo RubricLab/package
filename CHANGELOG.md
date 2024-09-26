@@ -1,3 +1,4 @@
+- [2024-09-26] [mod](https://github.com/RubricLab/package/commit/8aaf3902de8434a35839ead2d5e0f097f51ec96b)
 - [2024-09-26] [modify workflow](https://github.com/RubricLab/package/commit/706f389a5e93cfa0772a57c41edc672b4a40734c)
 - [2024-09-26] [mod workflows](https://github.com/RubricLab/package/commit/1854f5e14682698520ee2a5bf99ba81b148fdc5e)
 - [2024-09-26] [modify template for ci](https://github.com/RubricLab/package/commit/5cc5a6617af973c88bffb26c9032f6856e6aa09a)
