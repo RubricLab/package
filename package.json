@@ -1,25 +1,25 @@
 {
-	"name": "@rubriclab/package",
-	"version": "0.1.7",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
-	"bin": {
-		"rubriclab-precommit": "./scripts/precommit.ts"
-	},
-	"private": false,
-	"simple-git-hooks": {
-		"pre-commit": "bun run ./scripts/precommit.ts"
-	},
-	"scripts": {
-		"postinstall": "bun run ./scripts/postinstall.ts",
-		"prepare": "bun run simple-git-hooks",
-		"bleed": "bunx npm-check-updates -u && bun i",
-		"format": "bunx biome format --write .",
-		"lint": "bunx biome check .",
-		"lint:fix": "bunx biome lint ."
-	},
-	"dependencies": {
-		"simple-git-hooks": "^2.8.1"
-	}
+  "name": "@rubriclab/package",
+  "version": "0.1.1804",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "bin": {
+    "rubriclab-precommit": "./scripts/precommit.ts"
+  },
+  "private": false,
+  "simple-git-hooks": {
+    "post-commit": "bun run ./scripts/post-commit.ts"
+  },
+  "scripts": {
+    "postinstall": "bun run ./scripts/postinstall.ts",
+    "prepare": "bun run simple-git-hooks",
+    "bleed": "bunx npm-check-updates -u && bun i",
+    "format": "bunx biome format --write .",
+    "lint": "bunx biome check .",
+    "lint:fix": "bunx biome lint ."
+  },
+  "dependencies": {
+    "simple-git-hooks": "^2.8.1"
+  }
 }
