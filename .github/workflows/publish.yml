@@ -5,6 +5,10 @@ on:
   branches:
    - main
 
+permissions:
+ contents: read
+ packages: write
+
 jobs:
  release:
   uses: rubriclab/package/.github/workflows/release-package.yml@main
