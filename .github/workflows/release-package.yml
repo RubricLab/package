@@ -7,6 +7,6 @@ on:
 
 jobs:
  release:
-  uses: rubriclab/package/workflow-templates/release-package.yml@main
+  uses: rubriclab/.github/workflow-templates/release-package.yml@main
   secrets:
    GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
