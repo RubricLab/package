@@ -1,12 +1,11 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
 	"bin": {
-		"rubriclab-precommit": "./scripts/precommit.ts",
-		"rubriclab-postcommit": "./scripts/postcommit.ts"
+		"rubriclab-precommit": "./scripts/precommit.ts"
 	},
 	"private": false,
 	"simple-git-hooks": {
