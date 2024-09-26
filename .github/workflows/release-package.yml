@@ -1,12 +1,38 @@
 name: Release Package
 
 on:
- push:
-  branches:
-   - main
+ workflow_call:
+  secrets:
+   GH_PACKAGE_TOKEN:
+    required: true
+
+permissions:
+ contents: read
+ packages: write
 
 jobs:
  release:
-  uses: rubriclab/.github/workflow-templates/release-package.yml@main
-  secrets:
-   GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checkout code
+     uses: actions/checkout@v4
+
+   - name: Setup Bun
+     uses: oven-sh/setup-bun@v2
+     with:
+      bun-version: 'latest'
+
+   - name: Configure npm for GitHub Packages
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+     run: |
+      npm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GH_PACKAGE_TOKEN }}"
+
+   - name: Install dependencies
+     run: bun install
+
+   - name: Build the package (if applicable)
+     run: bun run build
+
+   - name: Publish to GitHub Packages
+     run: npm publish --registry https://npm.pkg.github.com/

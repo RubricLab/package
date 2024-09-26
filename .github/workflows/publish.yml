@@ -1,0 +1,12 @@
+name: Release Package
+
+on:
+ push:
+  branches:
+   - main
+
+jobs:
+ release:
+  uses: rubriclab/package/.github/workflows/release-package.yml@main
+  secrets:
+   GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
