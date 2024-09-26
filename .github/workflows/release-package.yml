@@ -31,7 +31,17 @@ jobs:
    - name: Install dependencies
      run: bun install
 
+   - name: Check if build script exists
+     id: check_build_script
+     run: |
+      if jq -e '.scripts.build' package.json >/dev/null; then
+        echo "has_build_script=true" >> $GITHUB_OUTPUT
+      else
+        echo "has_build_script=false" >> $GITHUB_OUTPUT
+      fi
+
    - name: Build the package (if applicable)
+     if: steps.check_build_script.outputs.has_build_script == 'true'
      run: bun run build
 
    - name: Publish to GitHub Packages

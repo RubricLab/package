@@ -1,3 +1,4 @@
+- [2024-09-26] [check if build script](https://github.com/RubricLab/package/commit/048d2df8827c9bfcf8438034260ef69e732bce00)
 - [2024-09-26] [perms](https://github.com/RubricLab/package/commit/4292383843810356ec8284bc1082b2e340edeb30)
 - [2024-09-26] [modify publish workflow](https://github.com/RubricLab/package/commit/493b42aa1953d2e15574681a7da1843c96b9b885)
 - [2024-09-26] [update workflow to grab from central](https://github.com/RubricLab/package/commit/9c40a9fd53aeb76f6b9556bd701475aa628bdab9)
