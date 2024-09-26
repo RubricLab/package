@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.75",
+	"version": "0.0.76",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
