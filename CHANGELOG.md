@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.626](https://github.com/RubricLab/rubric/compare/v0.0.612...v0.0.626) (2024-09-26)
+### [0.0.629](https://github.com/RubricLab/rubric/compare/v0.0.612...v0.0.629) (2024-09-26)
 
 ### [0.0.624](https://github.com/RubricLab/rubric/compare/v0.0.607...v0.0.624) (2024-09-26)
 
