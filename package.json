@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.1394",
+	"version": "0.0.1395",
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
@@ -10,7 +10,7 @@
 	},
 	"private": false,
 	"simple-git-hooks": {
-		"pre-commit": "bun run ./scripts/precommit.ts",
+		"pre-commit": "bun run ./scripts/precommit.ts"
 	},
 	"scripts": {
 		"postinstall": "bun run ./scripts/postinstall.ts",
