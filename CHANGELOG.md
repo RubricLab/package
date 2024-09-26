@@ -2,21 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.658](https://github.com/RubricLab/rubric/compare/v0.0.628...v0.0.658) (2024-09-26)
+### [0.0.659](https://github.com/RubricLab/rubric/compare/v0.0.628...v0.0.659) (2024-09-26)
+
+### 0.0.623 (2024-09-26)
 
 ### 0.0.632 (2024-09-26)
 
 ### 0.0.644 (2024-09-26)
 
-### [0.0.654](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.654) (2024-09-26)
+### [0.0.655](https://github.com/RubricLab/rubric/compare/v0.0.628...v0.0.655) (2024-09-26)
 
-### 0.0.628 (2024-09-26)
+### [0.0.651](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.651) (2024-09-26)
 
-### [0.0.649](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.649) (2024-09-26)
+### [0.0.646](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.646) (2024-09-26)
 
-### [0.0.642](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.642) (2024-09-26)
+### [0.0.641](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.641) (2024-09-26)
 
-### [0.0.636](https://github.com/RubricLab/rubric/compare/v0.0.589...v0.0.636) (2024-09-26)
+### [0.0.633](https://github.com/RubricLab/rubric/compare/v0.0.621...v0.0.633) (2024-09-26)
+
+### 0.0.624 (2024-09-26)
 
 ### [0.0.630](https://github.com/RubricLab/rubric/compare/v0.0.612...v0.0.630) (2024-09-26)
 
