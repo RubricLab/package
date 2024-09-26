@@ -9,5 +9,4 @@ jobs:
  release:
   uses: rubriclab/package/.github/workflows/release-package.yml@main
   secrets:
-   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
