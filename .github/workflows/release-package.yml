@@ -13,8 +13,7 @@ jobs:
   permissions:
    contents: read
    packages: write
-  env:
-   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   steps:
    - name: Checkout code
      uses: actions/checkout@v4
@@ -35,3 +34,5 @@ jobs:
 
    - name: Publish to GitHub Packages
      run: npm publish --registry https://npm.pkg.github.com/
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

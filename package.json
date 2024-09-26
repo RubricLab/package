@@ -1,8 +1,12 @@
 {
   "name": "@rubriclab/package",
-  "version": "0.0.1819",
+  "version": "0.0.1820",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RubricLab/package.git"
   },
   "bin": {
     "rubriclab-precommit": "./scripts/precommit.ts"
