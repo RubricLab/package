@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.1398](https://github.com/RubricLab/rubric/compare/v0.0.1301...v0.0.1398) (2024-09-26)
 
+### [0.0.1398](https://github.com/RubricLab/rubric/compare/v0.0.1301...v0.0.1398) (2024-09-26)
+
 ### [0.0.1398](https://github.com/RubricLab/rubric/compare/v0.0.1397...v0.0.1398) (2024-09-26)
 
 ### [0.0.1397](https://github.com/RubricLab/rubric/compare/v0.0.1349...v0.0.1397) (2024-09-26)
