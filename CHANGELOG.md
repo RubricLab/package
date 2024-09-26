@@ -1,3 +1,4 @@
+- [2024-09-26] [use passed token](https://github.com/RubricLab/package/commit/abe9acd4d65cd1cb40a3b4f4b65669da0aae9d39)
 - [2024-09-26] [check if build script](https://github.com/RubricLab/package/commit/048d2df8827c9bfcf8438034260ef69e732bce00)
 - [2024-09-26] [perms](https://github.com/RubricLab/package/commit/4292383843810356ec8284bc1082b2e340edeb30)
 - [2024-09-26] [modify publish workflow](https://github.com/RubricLab/package/commit/493b42aa1953d2e15574681a7da1843c96b9b885)

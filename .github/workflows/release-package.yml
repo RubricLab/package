@@ -2,9 +2,6 @@ name: Release Package
 
 on:
  workflow_call:
-  secrets:
-   GH_PACKAGE_TOKEN:
-    required: true
 
 permissions:
  contents: read
@@ -13,6 +10,8 @@ permissions:
 jobs:
  release:
   runs-on: ubuntu-latest
+  env:
+   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   steps:
    - name: Checkout code
      uses: actions/checkout@v4
@@ -21,12 +20,6 @@ jobs:
      uses: oven-sh/setup-bun@v2
      with:
       bun-version: 'latest'
-
-   - name: Configure npm for GitHub Packages
-     env:
-      NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-     run: |
-      npm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GH_PACKAGE_TOKEN }}"
 
    - name: Install dependencies
      run: bun install
