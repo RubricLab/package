@@ -1,6 +1,6 @@
 {
   "name": "@rubriclab/package",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -17,10 +17,10 @@
   },
   "scripts": {
     "postinstall": "bun run ./scripts/postinstall.ts",
-    "prepare": "bunx simple-git-hooks",
-    "bleed": "bunx npm-check-updates -u && bun i",
-    "format": "bunx biome format --write .",
-    "lint": "bunx biome check .",
-    "lint:fix": "bunx biome lint ."
+    "prepare": "bun x simple-git-hooks",
+    "bleed": "bun x npm-check-updates -u && bun i",
+    "format": "bun x biome format --write .",
+    "lint": "bun x biome check .",
+    "lint:fix": "bun x biome lint ."
   }
 }
