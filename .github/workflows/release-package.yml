@@ -40,6 +40,11 @@ jobs:
    - name: Install dependencies
      run: bun install
 
+   - name: Log the GITHUB_TOKEN value
+     run: echo $GITHUB_TOKEN
+     env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
    - name: Publish to GitHub Packages
      run: npm publish
      env:
