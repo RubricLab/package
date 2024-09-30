@@ -1,3 +1,4 @@
+- [2024-09-30] [Add ID token to publish workflow](https://github.com/RubricLab/package/commit/bdde9e59b74cb1ec28d037d1568b0c9e22a0c115)
 - [2024-09-30] [Add ID token permission](https://github.com/RubricLab/package/commit/219ec0077213471a441d4ffc7e5bf1e3520c4bd7)
 - [2024-09-30] [Change reg](https://github.com/RubricLab/package/commit/fed2eb94d2428646ba9b16c0a94a095b9e00c6da)
 - [2024-09-30] [Fix publish](https://github.com/RubricLab/package/commit/5c4e7447c53b3d5fcb0ffb6db16e831f74e26494)
