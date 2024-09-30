@@ -1,3 +1,4 @@
+- [2024-09-30] [Fix publish](https://github.com/RubricLab/package/commit/5c4e7447c53b3d5fcb0ffb6db16e831f74e26494)
 - [2024-09-30] [Use NPM token](https://github.com/RubricLab/package/commit/6f39850b3d63aa1f70d543917b71f64379402f4d)
 - [2024-09-30] [Add public flag](https://github.com/RubricLab/package/commit/19da8316f671cf8fac1025d9f8a232a4769d52f6)
 - [2024-09-30] [simple-git-hooks to bunx](https://github.com/RubricLab/package/commit/9c48bd26a150bec309fb0870d868fc249c6b8beb)
