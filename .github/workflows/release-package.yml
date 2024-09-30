@@ -3,10 +3,6 @@ name: Release Package
 on:
  workflow_call:
 
-permissions:
- contents: read
- packages: write
-
 jobs:
  release:
   runs-on: ubuntu-latest
@@ -34,6 +30,6 @@ jobs:
      run: bun install
 
    - name: Publish to GitHub Packages
-     run: npm publish --registry https://npm.pkg.github.com/
+     run: npm publish
      env:
       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
