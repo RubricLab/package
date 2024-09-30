@@ -1,3 +1,4 @@
+- [2024-09-30] [Use org secret](https://github.com/RubricLab/package/commit/092c1e6d6a86d1bb0edb7005f4b63cec825442d3)
 - [2024-09-30] [Publish to both regs](https://github.com/RubricLab/package/commit/647c3d6d8d016cd45ae88fd4e259c4b4fb27c652)
 - [2024-09-30] [Use NPM token](https://github.com/RubricLab/package/commit/aeb4fc859d6ed64ea16b08b9a73b108f332cb0e6)
 - [2024-09-30] [Remove log and login](https://github.com/RubricLab/package/commit/dd6e8392afd12d5b0e761692fef23b976d417da9)
