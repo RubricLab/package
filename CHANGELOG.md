@@ -1,3 +1,4 @@
+- [2024-09-30] [simple-git-hooks to bunx](https://github.com/RubricLab/package/commit/9c48bd26a150bec309fb0870d868fc249c6b8beb)
 - [2024-09-30] [cleanup bin](https://github.com/RubricLab/package/commit/919bd9370ce2f7191ae0356a106b03f05dc9d9a8)
 - [2024-09-30] [cleanup thing](https://github.com/RubricLab/package/commit/b8c09fdd28e5458028dc093ad1049d82c2242655)
 - [2024-09-30] [test](https://github.com/RubricLab/package/commit/4ef7b4c77dfb507b5d8f271991b9188f6857059f)

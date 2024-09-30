@@ -14,7 +14,7 @@ try {
 	}
 
 	pkgJson.scripts = pkgJson.scripts || {}
-	pkgJson.scripts.prepare = 'bun run simple-git-hooks'
+	pkgJson.scripts.prepare = 'bunx simple-git-hooks'
 
 	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 } catch (error) {
