@@ -1,3 +1,4 @@
+- [2024-09-30] [publish to npm](https://github.com/RubricLab/package/commit/d659637c2453a21e66c3e55ae620669c3922247a)
 - [2024-09-30] [log](https://github.com/RubricLab/package/commit/9812ab00a4e61e89c0b746894d3e82ad05d49c2a)
 - [2024-09-30] [Log GH token](https://github.com/RubricLab/package/commit/c05e5123cf1df00a21923b3784eabadf88b317ef)
 - [2024-09-30] [go](https://github.com/RubricLab/package/commit/850882c994fe9d1309befdfbf1777b94664ab209)

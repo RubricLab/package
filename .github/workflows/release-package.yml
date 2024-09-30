@@ -19,33 +19,13 @@ jobs:
      with:
       bun-version: 'latest'
 
-   #  - name: Setup Node
-   #    uses: actions/setup-node@v4
-   #    with:
-   #     node-version: '20.x'
-   #     registry-url: 'https://registry.npmjs.org'
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+       node-version: '20.x'
+       registry-url: 'https://registry.npmjs.org'
 
-   #  - name: Publish to NPM Packages
-   #    run: npm publish
-   #    env:
-   #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-   - name: Setup Node
-     uses: actions/setup-node@v4
-     with:
-      node-version: '20.x'
-      registry-url: 'https://npm.pkg.github.com'
-      scope: '@rubriclab'
-
-   - name: Install dependencies
-     run: bun install
-
-   - name: Log the GITHUB_TOKEN value
-     run: echo $GH_PACKAGE_TOKEN
-     env:
-      GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-
-   - name: Publish to GitHub Packages
-     run: npm publish
-     env:
-      NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+    - name: Publish to NPM Packages
+      run: npm publish
+      env:
+       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
