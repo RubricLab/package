@@ -33,7 +33,7 @@ jobs:
      env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-   - name: Log the NPM_TOKEN value
+   - name: Log the NPM_TOKEN value again
      run: echo $TEST
      env:
       TEST: ${{ secrets.TEST }}
