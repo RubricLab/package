@@ -35,6 +35,8 @@ jobs:
 
    - name: Log the NPM_TOKEN value
      run: echo $NPM_TOKEN
+     env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
    - name: Publish to GitHub Packages
      run: npm publish
