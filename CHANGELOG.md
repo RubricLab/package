@@ -1,3 +1,4 @@
+- [2024-09-30] [Log token](https://github.com/RubricLab/package/commit/4191a1401ae106d8f343bda169a40f4a884b5996)
 - [2024-09-30] [Log into NPM in CI](https://github.com/RubricLab/package/commit/0e00fd7efdb95aaa5d6d7700758f79f98c77d9b7)
 - [2024-09-30] [Add ID token to publish workflow](https://github.com/RubricLab/package/commit/bdde9e59b74cb1ec28d037d1568b0c9e22a0c115)
 - [2024-09-30] [Add ID token permission](https://github.com/RubricLab/package/commit/219ec0077213471a441d4ffc7e5bf1e3520c4bd7)
