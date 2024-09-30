@@ -1,3 +1,4 @@
+- [2024-09-30] [Remove log and login](https://github.com/RubricLab/package/commit/dd6e8392afd12d5b0e761692fef23b976d417da9)
 - [2024-09-30] [Inherit secrets](https://github.com/RubricLab/package/commit/b0ec2999b808f363eef870070f0518b55975de5d)
 - [2024-09-30] [Pass secrets thru](https://github.com/RubricLab/package/commit/4ad4d20a604d19babc8286ed7de8321785c262d5)
 - [2024-09-30] [temporarily move action to publush](https://github.com/RubricLab/package/commit/da85f59cacd33bc62868961c17f07237cc83f810)
