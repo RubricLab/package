@@ -1,3 +1,4 @@
+- [2024-09-30] [Add GH scope](https://github.com/RubricLab/package/commit/29328a6713371d666c32a2c024c097fb5ef3e39b)
 - [2024-09-30] [Pass original token](https://github.com/RubricLab/package/commit/e222b482ad55cf571210e0f2eacf1af0e60abe48)
 - [2024-09-30] [Pass env through](https://github.com/RubricLab/package/commit/20e2ba378c24123bf082b4c0307a04bbedbf3ba6)
 - [2024-09-30] [Pass token thru](https://github.com/RubricLab/package/commit/22e9ae9afe5aafe67ceb8440d03facd18c1ca322)
