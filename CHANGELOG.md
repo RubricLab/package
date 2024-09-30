@@ -1,3 +1,4 @@
+- [2024-09-30] [Inherit secrets](https://github.com/RubricLab/package/commit/b0ec2999b808f363eef870070f0518b55975de5d)
 - [2024-09-30] [Pass secrets thru](https://github.com/RubricLab/package/commit/4ad4d20a604d19babc8286ed7de8321785c262d5)
 - [2024-09-30] [temporarily move action to publush](https://github.com/RubricLab/package/commit/da85f59cacd33bc62868961c17f07237cc83f810)
 - [2024-09-30] [Trigger build](https://github.com/RubricLab/package/commit/78c9d7ea8f92df44f7aaba4413fa76e128817392)

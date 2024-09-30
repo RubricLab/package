@@ -13,5 +13,4 @@ permissions:
 jobs:
  release:
   uses: rubriclab/package/.github/workflows/release-package.yml@main
-  secrets:
-   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  secrets: inherit
