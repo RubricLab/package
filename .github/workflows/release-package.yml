@@ -41,9 +41,9 @@ jobs:
      run: bun install
 
    - name: Log the GITHUB_TOKEN value
-     run: echo $GITHUB_TOKEN
+     run: echo $GH_PACKAGE_TOKEN
      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_PACKAGE_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
 
    - name: Publish to GitHub Packages
      run: npm publish
