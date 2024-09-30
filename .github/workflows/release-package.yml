@@ -1,7 +1,6 @@
 name: Release Package
 
-on:
- workflow_call:
+on: workflow_call
 
 jobs:
  release:
@@ -19,7 +18,6 @@ jobs:
      with:
       node-version: '20.x'
       registry-url: 'https://npm.pkg.github.com'
-      scope: '@rubriclab'
 
    - name: Setup Bun
      uses: oven-sh/setup-bun@v2
