@@ -1,6 +1,6 @@
 {
   "name": "@rubriclab/package",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -9,7 +9,7 @@
     "url": "https://github.com/RubricLab/package.git"
   },
   "bin": {
-    "rubriclab-precommit": "./scripts/precommit.ts"
+    "rubriclab-postcommit": "./scripts/post-commit.ts"
   },
   "private": false,
   "simple-git-hooks": {
@@ -17,13 +17,10 @@
   },
   "scripts": {
     "postinstall": "bun run ./scripts/postinstall.ts",
-    "prepare": "bun run simple-git-hooks",
+    "prepare": "bunx simple-git-hooks",
     "bleed": "bunx npm-check-updates -u && bun i",
     "format": "bunx biome format --write .",
     "lint": "bunx biome check .",
     "lint:fix": "bunx biome lint ."
-  },
-  "dependencies": {
-    "simple-git-hooks": "^2.8.1"
   }
 }

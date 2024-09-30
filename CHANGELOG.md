@@ -1,3 +1,4 @@
+- [2024-09-30] [cleanup thing](https://github.com/RubricLab/package/commit/b8c09fdd28e5458028dc093ad1049d82c2242655)
 - [2024-09-30] [test](https://github.com/RubricLab/package/commit/4ef7b4c77dfb507b5d8f271991b9188f6857059f)
 - [2024-09-26] [again](https://github.com/RubricLab/package/commit/00bea9648d648d83e806dac3ef0b5ca0972a39cf)
 - [2024-09-26] [anotha](https://github.com/RubricLab/package/commit/b8eea72aaee463483a46b6f72fb5c6e1566e1658)
