@@ -10,8 +10,7 @@ try {
 	const pkgJson = JSON.parse(readFileSync(pkgJsonPath, 'utf-8'))
 
 	pkgJson['simple-git-hooks'] = {
-		'pre-commit': 'bun run precommit',
-		'post-commit': 'bun run postcommit'
+		'post-commit': 'bun run rubriclab-postcommit'
 	}
 
 	pkgJson.scripts = pkgJson.scripts || {}
