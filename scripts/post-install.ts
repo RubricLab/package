@@ -21,7 +21,7 @@ try {
 	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 
 
-	const file = Bun.file("../.github/workflows/publish.yml")
+	const file = Bun.file(join(projectRoot, 'node_modules/@rubriclab/package/.github/workflows/publish.yml'))
 	await Bun.write(join(projectRoot, '.github/workflows/publish.yml'), file)
 
 

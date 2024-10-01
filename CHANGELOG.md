@@ -1,3 +1,4 @@
+- [2024-10-01] [new folder loc](https://github.com/RubricLab/package/commit/c664bce0e416c74b7bdfe862e642ec792b925ffb)
 - [2024-10-01] [add github workflow to init process](https://github.com/RubricLab/package/commit/ef7bffb64e4d70961f6e0f66b8e60e2466895201)
 - [2024-10-01] [export postinstall bin](https://github.com/RubricLab/package/commit/2d71dba989d3921609a9d45f0304aec166216c9b)
 - [2024-09-30] [Format YML](https://github.com/RubricLab/package/commit/7bd64caadb14241590e9ddd0316be1b7d4741969)
