@@ -1,3 +1,4 @@
+- [2024-10-01] [Bun run bin](https://github.com/RubricLab/package/commit/1ab202522dbb5d80d7bc7e98d889dfac02db5412)
 - [2024-10-01] [bunx](https://github.com/RubricLab/package/commit/e0a07716d7b1b0e27ae8def0892399906409ca41)
 - [2024-10-01] [again](https://github.com/RubricLab/package/commit/935a8333e2defb917a0e256ca11bb37a46f2b7aa)
 - [2024-10-01] [try again](https://github.com/RubricLab/package/commit/9cb731c98cfbadffa77e548b927c462240894de5)
