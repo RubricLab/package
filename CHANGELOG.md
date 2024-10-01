@@ -1,3 +1,4 @@
+- [2024-10-01] [again](https://github.com/RubricLab/package/commit/935a8333e2defb917a0e256ca11bb37a46f2b7aa)
 - [2024-10-01] [try again](https://github.com/RubricLab/package/commit/9cb731c98cfbadffa77e548b927c462240894de5)
 - [2024-10-01] [release with new conventions](https://github.com/RubricLab/package/commit/12acf557014df1c4f5b2bf8dc43b606a64f253a8)
 - [2024-10-01] [build if build](https://github.com/RubricLab/package/commit/30ed3b094bb5ea0149aa5991ac2789d739e137e8)
