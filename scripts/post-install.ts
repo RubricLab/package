@@ -21,7 +21,7 @@ try {
 	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 
 	
-	const file = Bun.file(join(import.meta.dir, '..', 'workflows/publish-package.yml'))
+	const file = Bun.file(join(import.meta.dir, '..', '.github/workflows/publish-package.yml'))
 	await Bun.write(join(projectRoot, '.github/workflows/publish.yml'), file)
 
 

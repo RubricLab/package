@@ -12,5 +12,5 @@ permissions:
 
 jobs:
  release:
-  uses: rubriclab/package/workflows/release-package.yml@main
+  uses: rubriclab/package/.github/workflows/release-package.yml@main
   secrets: inherit
