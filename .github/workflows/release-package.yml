@@ -28,6 +28,14 @@ jobs:
    - name: Install dependencies
      run: bun install
 
+   - name: Build (if build script exists)
+     run: |
+      if bun run build &> /dev/null; then
+        bun run build
+      else
+        echo "No build script found, skipping build step"
+      fi
+
    - name: Publish to NPM Packages
      run: npm publish
      env:

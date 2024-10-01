@@ -1,3 +1,4 @@
+- [2024-10-01] [build if build](https://github.com/RubricLab/package/commit/30ed3b094bb5ea0149aa5991ac2789d739e137e8)
 - [2024-10-01] [bring back bun](https://github.com/RubricLab/package/commit/47e851c8abd2838d825f6f7dd495208e2b78ef34)
 - [2024-10-01] [streamline](https://github.com/RubricLab/package/commit/bceeab25b621a9a14621b58f6c47c3b4d18b480f)
 - [2024-10-01] [working github workflow path](https://github.com/RubricLab/package/commit/101745d479027a4e80b57e2a1f3348ffd65e9685)
