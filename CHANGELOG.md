@@ -1,3 +1,4 @@
+- [2024-10-01] [add github workflow to init process](https://github.com/RubricLab/package/commit/ef7bffb64e4d70961f6e0f66b8e60e2466895201)
 - [2024-10-01] [export postinstall bin](https://github.com/RubricLab/package/commit/2d71dba989d3921609a9d45f0304aec166216c9b)
 - [2024-09-30] [Format YML](https://github.com/RubricLab/package/commit/7bd64caadb14241590e9ddd0316be1b7d4741969)
 - [2024-09-30] [Fix YML](https://github.com/RubricLab/package/commit/bf43d2230be33033adbce152033652b46c16161e)
