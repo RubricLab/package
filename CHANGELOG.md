@@ -1,3 +1,4 @@
+- [2024-10-01] [streamline](https://github.com/RubricLab/package/commit/bceeab25b621a9a14621b58f6c47c3b4d18b480f)
 - [2024-10-01] [working github workflow path](https://github.com/RubricLab/package/commit/101745d479027a4e80b57e2a1f3348ffd65e9685)
 - [2024-10-01] [new folder loc](https://github.com/RubricLab/package/commit/c664bce0e416c74b7bdfe862e642ec792b925ffb)
 - [2024-10-01] [add github workflow to init process](https://github.com/RubricLab/package/commit/ef7bffb64e4d70961f6e0f66b8e60e2466895201)
