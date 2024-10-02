@@ -1,3 +1,4 @@
+- [2024-10-02] [Use bun x instead of bunx](https://github.com/RubricLab/package/commit/d275bcc6e64a1dd86a86d174c4cf91f392df67ad)
 - [2024-10-01] [Run with bunx](https://github.com/RubricLab/package/commit/3eaf4da606419744daf7306c609acec43041158a)
 - [2024-10-01] [Bun run bin](https://github.com/RubricLab/package/commit/29319b0949a45cb696fa69c3a7251eb6c2dc4393)
 - [2024-10-01] [Bun run bin](https://github.com/RubricLab/package/commit/1ab202522dbb5d80d7bc7e98d889dfac02db5412)

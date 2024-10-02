@@ -1,6 +1,6 @@
 {
   "name": "@rubriclab/package",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "repository": {
     "type": "git",
     "url": "https://github.com/RubricLab/package.git"
@@ -15,8 +15,8 @@
   },
   "scripts": {
     "postinstall": "bun x @rubriclab/package rubriclab-setuppackage",
-    "prepare": "bunx simple-git-hooks",
-    "bleed": "bunx npm-check-updates -u && bun i",
+    "prepare": "bun x simple-git-hooks",
+    "bleed": "bun x npm-check-updates -u && bun i",
     "format": "bun x biome format --write .",
     "lint": "bun x biome check .",
     "lint:fix": "bun x biome lint .",
