@@ -1,3 +1,4 @@
+- [2024-10-02] [Add Bun types](https://github.com/RubricLab/package/commit/53e2afab76d750efb07f5d91f183f904647e1f70)
 - [2024-10-02] [More bun x](https://github.com/RubricLab/package/commit/f71837124ab29707694360cee767e2dcf751b738)
 - [2024-10-02] [Use bun x instead of bunx](https://github.com/RubricLab/package/commit/d275bcc6e64a1dd86a86d174c4cf91f392df67ad)
 - [2024-10-01] [Run with bunx](https://github.com/RubricLab/package/commit/3eaf4da606419744daf7306c609acec43041158a)
