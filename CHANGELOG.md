@@ -1,3 +1,4 @@
+- [2024-10-02] [vscode](https://github.com/RubricLab/package/commit/bacb3288084f058a7a9e27ef25ae198686665bd1)
 - [2024-10-02] [sync](https://github.com/RubricLab/package/commit/c7dbeb3143a103e9a24951008062f73c27433ecd)
 - [2024-10-02] [Add Bun types](https://github.com/RubricLab/package/commit/53e2afab76d750efb07f5d91f183f904647e1f70)
 - [2024-10-02] [More bun x](https://github.com/RubricLab/package/commit/f71837124ab29707694360cee767e2dcf751b738)
