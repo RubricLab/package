@@ -17,6 +17,12 @@ try {
 	pkgJson.scripts.prepare = 'bun x simple-git-hooks'
 	pkgJson.scripts.bleed = 'bun x npm-check-updates -u && bun i'
 	pkgJson.scripts.clean = 'rm -rf .next && rm -rf node_modules'
+	pkgJson.scripts.format = 'bun x biome format --write .'
+	pkgJson.scripts.lint = 'bun x biome check .'
+	pkgJson.scripts['lint:fix'] = 'bun x biome lint . --write --unsafe'
+	pkgJson.publishConfig = {
+		access: 'public'
+	}
 
 	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 
