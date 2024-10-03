@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 
-import {readFileSync, writeFileSync} from 'node:fs'
-import {join} from 'node:path'
+import { readFileSync, writeFileSync } from 'node:fs'
+import { join } from 'node:path'
 
 const projectRoot = process.cwd()
 const pkgJsonPath = join(projectRoot, 'package.json')
@@ -20,9 +20,7 @@ try {
 
 	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
 
-	const file = Bun.file(
-		join(import.meta.dir, '..', 'workflows/publish-package.yml')
-	)
+	const file = Bun.file(join(import.meta.dir, '..', 'workflows/publish-package.yml'))
 	await Bun.write(join(projectRoot, '.github/workflows/publish.yml'), file)
 } catch (error) {
 	console.error('Postinstall script failed:', error)
