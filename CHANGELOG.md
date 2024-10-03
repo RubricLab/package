@@ -1,3 +1,4 @@
+- [2024-10-03] [gitignore turbo, format](https://github.com/RubricLab/package/commit/9b47d2616c4cbcba32b321ac7df187cd4f9b45b0)
 - [2024-10-02] [modify postinstall](https://github.com/RubricLab/package/commit/12084d1b43480f29c84ea0e108cc67f2aed9055b)
 - [2024-10-02] [vscode](https://github.com/RubricLab/package/commit/bacb3288084f058a7a9e27ef25ae198686665bd1)
 - [2024-10-02] [sync](https://github.com/RubricLab/package/commit/c7dbeb3143a103e9a24951008062f73c27433ecd)
