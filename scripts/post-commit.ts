@@ -1,33 +1,40 @@
 #!/usr/bin/env bun
 
 import { spawnSync } from 'bun'
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 
 if (process.env.AMENDING) {
 	process.exit(0)
 }
 
+const run = (
+	command: `${string} ${string}`,
+	options?: {
+		env?: { [key: string]: string }
+	}
+) => {
+	const { stdout } = spawnSync(command.split(' '), options)
+	return stdout.toString().trim()
+}
+
+const CHANGELOG_PATH = 'CHANGELOG.md'
+const PACKAGE_PATH = 'package.json'
+
 try {
-	const packageJsonContent = readFileSync('package.json', 'utf-8')
-	const packageJson = JSON.parse(packageJsonContent)
+	const packageJsonContent = Bun.file(PACKAGE_PATH)
+	const packageJson = await packageJsonContent.json()
+
+	console.log({ packageJson })
 
 	const versionParts = packageJson.version.split('.').map(Number)
 	versionParts[2] += 1
 	packageJson.version = versionParts.join('.')
 
-	writeFileSync('package.json', `${JSON.stringify(packageJson, null, 2)}\n`)
+	await Bun.write(PACKAGE_PATH, `${JSON.stringify(packageJson, null, 2)}\n`)
 
-	const commitHash = spawnSync(['git', 'rev-parse', 'HEAD']).stdout.toString().trim()
-
-	const commitMessage = spawnSync(['git', 'log', '-1', '--pretty=%B']).stdout.toString().trim()
-
-	const commitDate = spawnSync(['git', 'log', '-1', '--pretty=%cd', '--date=short'])
-		.stdout.toString()
-		.trim()
-
-	let repositoryUrl = spawnSync(['git', 'config', '--get', 'remote.origin.url'])
-		.stdout.toString()
-		.trim()
+	const commitHash = run('git rev-parse HEAD')
+	const commitMessage = run('git log -1 --pretty=%B')
+	const commitDate = run('git log -1 --pretty=%cd --date=short')
+	let repositoryUrl = run('git config --get remote.origin.url')
 
 	if (repositoryUrl.endsWith('.git')) {
 		repositoryUrl = repositoryUrl.slice(0, -4)
@@ -37,22 +44,21 @@ try {
 	}
 
 	const commitUrl = `${repositoryUrl}/commit/${commitHash}`
-
 	const changelogEntry = `- [${commitDate}] [${commitMessage}](${commitUrl})\n`
 
-	const changelogPath = 'CHANGELOG.md'
 	let changelogContent = ''
-	if (existsSync(changelogPath)) {
-		changelogContent = readFileSync(changelogPath, 'utf-8')
+	const changelog = Bun.file(CHANGELOG_PATH)
+	const changelogExists = await changelog.exists()
+	if (changelogExists) {
+		changelogContent = await changelog.text()
 	} else {
 		changelogContent = '# Changelog\n\n'
 	}
 
-	writeFileSync(changelogPath, `${changelogEntry}${changelogContent}`)
+	await Bun.write(CHANGELOG_PATH, `${changelogEntry}${changelogContent}`)
 
-	spawnSync(['git', 'add', 'package.json', 'CHANGELOG.md'])
-
-	spawnSync(['git', 'commit', '--amend', '--no-verify', '--no-edit'], {
+	run('git add package.json CHANGELOG.md')
+	run('git commit --amend --no-verify --no-edit', {
 		env: { ...process.env, AMENDING: 'true' }
 	})
 } catch (error) {
