@@ -15,7 +15,7 @@ try {
 
 	pkgJson.scripts = pkgJson.scripts || {}
 	pkgJson.scripts.prepare = 'bun x simple-git-hooks'
-	pkgJson.scripts.bleed = 'bun x npm-check-updates -u && bun i'
+	pkgJson.scripts.bleed = 'bun x npm-check-updates -u'
 	pkgJson.scripts.clean = 'rm -rf .next && rm -rf node_modules'
 	pkgJson.scripts.format = 'bun x biome format --write .'
 	pkgJson.scripts.lint = 'bun x biome check .'

@@ -1,3 +1,4 @@
+- [2024-10-04] [bleed for mono](https://github.com/RubricLab/package/commit/3c471116e7e50f703c8fbbf4bf36e2c371254b63)
 - [2024-10-03] [gitignore turbo, format](https://github.com/RubricLab/package/commit/b4d8d9fee07d65a4eede7ce48a33dd963dcebaf3)
 - [2024-10-03] [gitignore turbo, format](https://github.com/RubricLab/package/commit/d969b805fcee388f285afba62ec7e14515d97fbc)
 - [2024-10-03] [gitignore turbo, format](https://github.com/RubricLab/package/commit/e88bda35eb20ddeee8077a788241f8c3fee75988)
