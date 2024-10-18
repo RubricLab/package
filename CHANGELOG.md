@@ -1,3 +1,4 @@
+- [2024-10-18] [post-commit hook](https://github.com/RubricLab/package/commit/8d490e082b47dfe7cc169bae481a36f0cc1337b4)
 - [2024-10-04] [Use Bun file APIs](https://github.com/RubricLab/package/commit/17f26299c5908b883d4d659f28423d162adb4942)
 - [2024-10-04] [bleed for mono](https://github.com/RubricLab/package/commit/4caf565ae9d7d81f0564b843e120673d907819db)
 - [2024-10-03] [gitignore turbo, format](https://github.com/RubricLab/package/commit/9b47d2616c4cbcba32b321ac7df187cd4f9b45b0)
