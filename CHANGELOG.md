@@ -1,3 +1,4 @@
+- [2024-10-24] [add notify-monorepo action](https://github.com/RubricLab/package/commit/84c7a866ed0bae6327ace3f1d7eaffde66ec22c8)
 - [2024-10-22] [null commit](https://github.com/RubricLab/package/commit/3ed1bb87967f633a8a20b79e7e64a93ae92ebec0)
 - [2024-10-18] [post-commit hook](https://github.com/RubricLab/package/commit/8d490e082b47dfe7cc169bae481a36f0cc1337b4)
 - [2024-10-04] [Use Bun file APIs](https://github.com/RubricLab/package/commit/17f26299c5908b883d4d659f28423d162adb4942)
