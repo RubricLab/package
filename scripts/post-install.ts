@@ -1,17 +1,14 @@
 #!/usr/bin/env bun
 
-import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const projectRoot = process.cwd()
-const pkgJsonPath = join(projectRoot, 'package.json')
-
 try {
-	const pkgJson = JSON.parse(readFileSync(pkgJsonPath, 'utf-8'))
+	const projectRoot = process.cwd()
+	const pkgJsonPath = join(projectRoot, 'package.json')
 
-	pkgJson['simple-git-hooks'] = {
-		'post-commit': 'bun run rubriclab-postcommit'
-	}
+	const pkgJson = await Bun.file(pkgJsonPath).json()
+
+	pkgJson['simple-git-hooks'] = { 'post-commit': 'bun run rubriclab-postcommit' }
 
 	pkgJson.scripts = pkgJson.scripts || {}
 	pkgJson.scripts.prepare = 'bun x simple-git-hooks'
@@ -20,14 +17,16 @@ try {
 	pkgJson.scripts.format = 'bun x biome format --write .'
 	pkgJson.scripts.lint = 'bun x biome check .'
 	pkgJson.scripts['lint:fix'] = 'bun x biome lint . --write --unsafe'
-	pkgJson.publishConfig = {
-		access: 'public'
-	}
-
-	writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2))
+	pkgJson.publishConfig = { access: 'public' }
 
 	const file = Bun.file(join(import.meta.dir, '..', 'workflows/publish-package.yml'))
-	await Bun.write(join(projectRoot, '.github/workflows/publish.yml'), file)
+
+	await Promise.all([
+		Bun.write(pkgJsonPath, JSON.stringify(pkgJson, null, 2)),
+		Bun.write(join(projectRoot, '.github/workflows/publish.yml'), file)
+	])
+
+	console.log('Set up package successfully.')
 } catch (error) {
 	console.error('Postinstall script failed:', error)
 	process.exit(1)
