@@ -1,3 +1,4 @@
+- [2025-03-05] [Fix version](https://github.com/rubriclab/package/commit/15976652cc3e1859cb93a3a4588bba11ef4a4625)
 - [2025-03-05] [Merge branch 'main' of https://github.com/rubriclab/package](https://github.com/rubriclab/package/commit/e8933c57b63cdf55d3bf697644733cda16b873c5)
 - [2024-11-09] [Add README and use Bun file read](https://github.com/RubricLab/package/commit/72413ce1826d5a064539d622f0c567dd8d65e94d)
 - [2024-10-24] [add notify-monorepo action](https://github.com/RubricLab/package/commit/84c7a866ed0bae6327ace3f1d7eaffde66ec22c8)
