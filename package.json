@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.101",
+	"version": "0.0.102",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
@@ -14,7 +14,8 @@
 		"post-commit": "bun run rubriclab-package post-commit"
 	},
 	"dependencies": {
-		"@rubriclab/cli": "*"
+		"@rubriclab/cli": "*",
+		"zod": "latest"
 	},
 	"scripts": {
 		"postinstall": "bun run ./cli.ts post-install",
