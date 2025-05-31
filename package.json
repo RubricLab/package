@@ -5,16 +5,17 @@
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
 	},
+	"main": "scripts/cli.ts",
 	"bin": {
-		"pkg": "./scripts/cli.ts"
+		"rubriclab-package": "./cli.ts"
 	},
 	"private": false,
 	"simple-git-hooks": {
-		"post-commit": "bun x pkg post-commit"
+		"post-commit": "bun run cli.ts post-commit"
 	},
 	"scripts": {
-		"postinstall": "bun x pkg post-install",
-		"prepare": "bun x pkg prepare",
+		"postinstall": "bun run cli.ts post-install",
+		"prepare": "bun run cli.ts prepare",
 		"bleed": "bun x npm-check-updates -u",
 		"format": "bun x biome format --write .",
 		"lint": "bun x biome check .",
