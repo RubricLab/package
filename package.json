@@ -6,12 +6,9 @@
 		"url": "https://github.com/RubricLab/package.git"
 	},
 	"main": "cli.ts",
-	"bin": {
-		"rubriclab-package": "./cli.ts"
-	},
 	"private": false,
 	"simple-git-hooks": {
-		"post-commit": "rubriclab-package post-commit"
+		"post-commit": "bun run ./cli.ts post-commit"
 	},
 	"dependencies": {
 		"@rubriclab/cli": "*",
