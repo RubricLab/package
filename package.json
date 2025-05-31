@@ -14,8 +14,8 @@
 		"post-commit": "bun run rubriclab-package post-commit"
 	},
 	"scripts": {
-		"postinstall": "bun run @rubriclab/package post-install",
-		"prepare": "bun run @rubriclab/package prepare",
+		"postinstall": "bun run ./cli.ts post-install",
+		"prepare": "bun run ./cli.ts prepare",
 		"bleed": "bun x npm-check-updates -u",
 		"format": "bun x biome format --write .",
 		"lint": "bun x biome check .",
