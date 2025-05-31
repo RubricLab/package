@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.103",
+	"version": "0.0.104",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
@@ -19,7 +19,7 @@
 	},
 	"scripts": {
 		"postinstall": "bun run ./cli.ts post-install",
-		"prepare": "rubriclab-package prepare",
+		"prepare": "bun run ./cli.ts prepare",
 		"bleed": "bun x npm-check-updates -u",
 		"format": "bun x biome format --write .",
 		"lint": "bun x biome check .",
