@@ -14,8 +14,10 @@ const cli = createCLI({
 			name: 'prepare',
 			description: 'Prepares a submodule',
 			args: z.object({}),
-			handler: () => {
-				$`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`
+			handler: async () => {
+				const result =
+					await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
+				console.log(result)
 			}
 		},
 		{
@@ -83,10 +85,10 @@ const cli = createCLI({
 
 				const pkgJson = await Bun.file(pkgJsonPath).json()
 
-				pkgJson['simple-git-hooks'] = { 'post-commit': 'bun run rubriclab-postcommit' }
+				pkgJson['simple-git-hooks'] = { 'post-commit': 'rubriclab-package post-commit' }
 
 				pkgJson.scripts = pkgJson.scripts || {}
-				pkgJson.scripts.prepare = 'bun x simple-git-hooks'
+				pkgJson.scripts.prepare = 'rubriclab-package prepare'
 				pkgJson.scripts.bleed = 'bun x npm-check-updates -u'
 				pkgJson.scripts.clean = 'rm -rf .next && rm -rf node_modules'
 				pkgJson.scripts.format = 'bun x biome format --write .'
