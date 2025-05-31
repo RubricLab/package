@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.102",
+	"version": "0.0.103",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
@@ -11,7 +11,7 @@
 	},
 	"private": false,
 	"simple-git-hooks": {
-		"post-commit": "bun run rubriclab-package post-commit"
+		"post-commit": "rubriclab-package post-commit"
 	},
 	"dependencies": {
 		"@rubriclab/cli": "*",
@@ -19,12 +19,12 @@
 	},
 	"scripts": {
 		"postinstall": "bun run ./cli.ts post-install",
-		"prepare": "bun run ./cli.ts prepare",
+		"prepare": "rubriclab-package prepare",
 		"bleed": "bun x npm-check-updates -u",
 		"format": "bun x biome format --write .",
 		"lint": "bun x biome check .",
 		"lint:fix": "bun x biome lint . --write --unsafe",
-		"clean": "rm -rf .next; rm bun.lockb; rm -rf node_modules"
+		"clean": "rm -rf .next && rm -rf node_modules"
 	},
 	"devDependencies": {
 		"@types/bun": "latest"

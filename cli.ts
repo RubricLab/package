@@ -96,7 +96,7 @@ const cli = createCLI({
 				pkgJson.scripts['lint:fix'] = 'bun x biome lint . --write --unsafe'
 				pkgJson.publishConfig = { access: 'public' }
 
-				const file = Bun.file(join(import.meta.dir, '..', 'workflows/publish-package.yml'))
+				const file = Bun.file(join(import.meta.dir, 'workflows/publish-package.yml'))
 
 				await Promise.all([
 					Bun.write(pkgJsonPath, JSON.stringify(pkgJson, null, 2)),
