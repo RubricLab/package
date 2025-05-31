@@ -10,11 +10,11 @@
 	},
 	"private": false,
 	"simple-git-hooks": {
-		"post-commit": "pkg post-commit"
+		"post-commit": "bun x pkg post-commit"
 	},
 	"scripts": {
-		"postinstall": "pkg post-install",
-		"prepare": "pkg prepare",
+		"postinstall": "bun x pkg post-install",
+		"prepare": "bun x pkg prepare",
 		"bleed": "bun x npm-check-updates -u",
 		"format": "bun x biome format --write .",
 		"lint": "bun x biome check .",
