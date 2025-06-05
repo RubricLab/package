@@ -1,11 +1,14 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.108",
+	"version": "0.0.109",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
 	},
 	"main": "cli.ts",
+	"bin": {
+		"rubriclab-package": "./cli.ts"
+	},
 	"private": false,
 	"simple-git-hooks": {
 		"post-commit": "bun run ./cli.ts post-commit"
