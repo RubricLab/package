@@ -15,9 +15,21 @@ const cli = createCLI({
 			description: 'Prepares a submodule',
 			args: z.object({}),
 			handler: async () => {
-				const result =
-					await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
-				console.log(result)
+				// Skip in CI environments
+				if (process.env.CI) {
+					console.log('CI detected, skipping prepare')
+					return
+				}
+
+				try {
+					// 	const result =
+					// 	await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
+					// console.log(result)
+					await $`bun x simple-git-hooks`
+					console.log('Git hooks setup complete')
+				} catch (error) {
+					console.log('Git hooks setup failed (this may be fine):', error.message)
+				}
 			}
 		},
 		{
