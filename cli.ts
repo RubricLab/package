@@ -22,10 +22,11 @@ const cli = createCLI({
 				}
 
 				try {
-					// 	const result =
-					// 	await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
+					const result =
+						await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
 					// console.log(result)
-					await $`bun x simple-git-hooks`
+					// await $`bun x simple-git-hooks`
+					console.log(result)
 					console.log('Git hooks setup complete')
 				} catch (error) {
 					console.log('Git hooks setup failed (this may be fine):', error.message)
