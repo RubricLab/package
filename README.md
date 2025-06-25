@@ -16,7 +16,7 @@ Run `bun add -d @rubriclab/package`.
 
 Ensure you have a `package.json`. If not, run `bun init`.
 
-Run `bunx rubriclab-setuppackage`. This will add a few resources to your package:
+Run `bunx rubriclab-package setup-package`. This will add a few resources to your package:
 
 - a publish workflow
   - on push to main, the NPM package will be bumped and auto-published
