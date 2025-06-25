@@ -1,3 +1,4 @@
+- [2025-06-25] [Fix changelog title formatting](https://github.com/RubricLab/package/commit/0daaf416a5a54a534dd0c86dc4613853c1499613)
 - [2025-06-25] [Fix changelog refs
 ](https://github.com/RubricLab/package/commit/42a611c4ceec54957411bbeef4f515c09f3135f1
 )
