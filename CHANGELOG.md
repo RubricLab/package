@@ -1,3 +1,6 @@
+- [2025-06-25] [Fix changelog refs
+](https://github.com/RubricLab/package/commit/42a611c4ceec54957411bbeef4f515c09f3135f1
+)
 - [[object Object]] [[object Object]](https://github.com/RubricLab/package
 /commit/[object Object])
 - [[object Object]] [[object Object]](https://github.com/RubricLab/package.git

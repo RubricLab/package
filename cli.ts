@@ -64,10 +64,10 @@ const cli = createCLI({
 
 				await Bun.write(PACKAGE_PATH, `${JSON.stringify(packageJson, null, 2)}\n`)
 
-				const commitHash = await $`git rev-parse HEAD`
-				const commitMessage = await $`git log -1 --pretty=%B`
-				const commitDate = await $`git log -1 --pretty=%cd --date=short`
-				let repositoryUrl = await $`git config --get remote.origin.url`.text()
+				const commitHash = (await $`git rev-parse HEAD`).text()
+				const commitMessage = (await $`git log -1 --pretty=%B`).text().replace('\n', '')
+				const commitDate = (await $`git log -1 --pretty=%cd --date=short`).text().replace('\n', '')
+				let repositoryUrl = (await $`git config --get remote.origin.url`).text().replace('\n', '')
 
 				if (repositoryUrl.endsWith('.git')) {
 					repositoryUrl = repositoryUrl.slice(0, -4)
