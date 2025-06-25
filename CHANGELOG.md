@@ -1,3 +1,5 @@
+- [[object Object]] [[object Object]](https://github.com/RubricLab/package
+/commit/[object Object])
 - [[object Object]] [[object Object]](https://github.com/RubricLab/package.git
 /commit/[object Object])
 - [[object Object]] [[object Object]](https://github.com/RubricLab/package.git

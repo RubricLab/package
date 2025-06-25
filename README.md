@@ -25,3 +25,7 @@ Run `bunx rubriclab-package setup-package`. This will add a few resources to you
   - `format`: tries to fix code issues
   - `bleed`: updates all dependencies to `latest`
   - `clean`: clears node modules and cache
+
+## CLI
+
+Run `bunx rubriclab-package` to see the available commands.
