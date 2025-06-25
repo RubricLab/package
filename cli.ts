@@ -7,7 +7,7 @@ import { z } from 'zod/v4'
 
 const cli = createCLI({
 	name: 'package cli',
-	version: '0.0.0',
+	version: '0.0.1',
 	description: 'Package CLI tool',
 	commands: [
 		{
@@ -22,11 +22,14 @@ const cli = createCLI({
 				}
 
 				try {
-					const result =
-						await $`rm -r .git/hooks && mkdir -p .git/hooks && ln -s ../../../.git/modules/packages/${process.cwd().split('/').pop()}/hooks .git/hooks && bun x simple-git-hooks`.text()
-					// console.log(result)
-					// await $`bun x simple-git-hooks`
-					console.log(result)
+					const packageName = process.cwd().split('/').pop()
+
+					console.log(await $`rm -rf .git/hooks`.text())
+					console.log(await $`mkdir -p .git/hooks`.text())
+					console.log(
+						await $`ln -s ../../../.git/modules/packages/${packageName}/hooks .git/hooks`.text()
+					)
+					console.log(await $`bun x simple-git-hooks`.text())
 					console.log('Git hooks setup complete')
 				} catch (error) {
 					console.log('Git hooks setup failed (this may be fine):', error.message)
