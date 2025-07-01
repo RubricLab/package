@@ -6,14 +6,10 @@ import { $ } from 'bun'
 import { z } from 'zod/v4'
 
 const cli = createCLI({
-	name: 'package cli',
-	version: '0.0.0',
-	description: 'Package CLI tool',
 	commands: [
 		{
-			name: 'prepare',
-			description: 'Prepares a submodule',
 			args: z.object({}),
+			description: 'Prepares a submodule',
 			handler: async () => {
 				// Skip in CI environments
 				if (process.env.CI) {
@@ -26,7 +22,7 @@ const cli = createCLI({
 
 					try {
 						await $`rm -r ${gitDir}/hooks`
-					} catch (e) {
+					} catch (_e) {
 						console.log('Hooks already removed')
 					}
 
@@ -40,12 +36,12 @@ const cli = createCLI({
 						error.stderr?.toString() || error.message
 					)
 				}
-			}
+			},
+			name: 'prepare'
 		},
 		{
-			name: 'post-commit',
-			description: 'Runs the post-commit hook',
 			args: z.object({}),
+			description: 'Runs the post-commit hook',
 			handler: async () => {
 				if (process.env.AMENDING) {
 					process.exit(0)
@@ -95,12 +91,12 @@ const cli = createCLI({
 				process.env.AMENDING = 'true'
 				await $`git commit --amend --no-verify --no-edit`
 				process.env.AMENDING = undefined
-			}
+			},
+			name: 'post-commit'
 		},
 		{
-			name: 'setup-package',
-			description: 'Sets up a new package',
 			args: z.object({}),
+			description: 'Sets up a new package',
 			handler: async () => {
 				const projectRoot = process.cwd()
 				const pkgJsonPath = join(projectRoot, 'package.json')
@@ -126,9 +122,13 @@ const cli = createCLI({
 				])
 
 				console.log('Set up package successfully.')
-			}
+			},
+			name: 'setup-package'
 		}
-	]
+	],
+	description: 'Package CLI tool',
+	name: 'package cli',
+	version: '0.0.0'
 })
 
 cli.parse()

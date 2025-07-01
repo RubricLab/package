@@ -1,32 +1,32 @@
 {
-	"name": "@rubriclab/package",
-	"version": "0.0.117",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/RubricLab/package.git"
-	},
-	"main": "cli.ts",
 	"bin": {
 		"rubriclab-package": "./cli.ts"
-	},
-	"private": false,
-	"simple-git-hooks": {
-		"post-commit": "bun run ./cli.ts post-commit"
 	},
 	"dependencies": {
 		"@rubriclab/cli": "*",
 		"zod": "latest"
 	},
-	"scripts": {
-		"prepare": "bun run ./cli.ts prepare",
-		"bleed": "bun x npm-check-updates -u",
-		"clean": "rm -rf .next && rm -rf node_modules",
-		"format": "bun x biome check . --write"
-	},
 	"devDependencies": {
 		"@types/bun": "latest"
 	},
+	"main": "cli.ts",
+	"name": "@rubriclab/package",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RubricLab/package.git"
+	},
+	"scripts": {
+		"bleed": "bun x npm-check-updates -u",
+		"clean": "rm -rf .next && rm -rf node_modules",
+		"format": "bun x biome check . --write",
+		"prepare": "bun run ./cli.ts prepare"
+	},
+	"simple-git-hooks": {
+		"post-commit": "bun run ./cli.ts post-commit"
+	},
+	"version": "0.0.118"
 }
