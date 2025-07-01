@@ -1,3 +1,4 @@
+- [2025-07-01] [consolidate biome format script](https://github.com/RubricLab/package/commit/241b32b724bb39a8aef2a317202063a2d7c60fff)
 - [2025-06-25] [Fix changelog title formatting](https://github.com/RubricLab/package/commit/0daaf416a5a54a534dd0c86dc4613853c1499613)
 - [2025-06-25] [Fix changelog refs
 ](https://github.com/RubricLab/package/commit/42a611c4ceec54957411bbeef4f515c09f3135f1

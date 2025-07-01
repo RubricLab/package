@@ -1,6 +1,6 @@
 {
 	"name": "@rubriclab/package",
-	"version": "0.0.116",
+	"version": "0.0.117",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/RubricLab/package.git"
@@ -20,10 +20,8 @@
 	"scripts": {
 		"prepare": "bun run ./cli.ts prepare",
 		"bleed": "bun x npm-check-updates -u",
-		"format": "bun x biome format --write .",
-		"lint": "bun x biome check .",
-		"lint:fix": "bun x biome lint . --write --unsafe",
-		"clean": "rm -rf .next && rm -rf node_modules"
+		"clean": "rm -rf .next && rm -rf node_modules",
+		"format": "bun x biome check . --write"
 	},
 	"devDependencies": {
 		"@types/bun": "latest"
