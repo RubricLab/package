@@ -1,6 +1,13 @@
 name: Release Package
 
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      working-directory:
+        description: 'Working directory to run commands in'
+        required: false
+        type: string
+        default: '.'
 
 jobs:
  release:
@@ -21,6 +28,7 @@ jobs:
 
    - name: Install dependencies
      run: bun install
+     working-directory: ${{ inputs.working-directory }}
 
    - name: Build (if build script exists)
      run: |
@@ -29,8 +37,10 @@ jobs:
       else
         echo "No build script found, skipping build step"
       fi
+     working-directory: ${{ inputs.working-directory }}
 
    - name: Publish to NPM Packages
      run: bun publish
+     working-directory: ${{ inputs.working-directory }}
      env:
       NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
