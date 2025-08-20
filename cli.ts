@@ -46,8 +46,9 @@ const cli = createCLI({
 				if (process.env.AMENDING) {
 					process.exit(0)
 				}
-				const CHANGELOG_PATH = 'CHANGELOG.md'
-				const PACKAGE_PATH = 'package.json'
+				// Use paths relative to current working directory (the package directory)
+				const CHANGELOG_PATH = join(process.cwd(), 'CHANGELOG.md')
+				const PACKAGE_PATH = join(process.cwd(), 'package.json')
 
 				const packageJsonContent = Bun.file(PACKAGE_PATH)
 				const packageJson = await packageJsonContent.json()
