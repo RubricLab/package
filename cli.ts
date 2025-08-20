@@ -40,15 +40,18 @@ const cli = createCLI({
 			name: 'prepare'
 		},
 		{
-			args: z.object({}),
+			args: z.object({
+				'working-dir': z.string().optional().describe('Working directory for the package (defaults to current directory)')
+			}),
 			description: 'Runs the post-commit hook',
-			handler: async () => {
+			handler: async (args) => {
 				if (process.env.AMENDING) {
 					process.exit(0)
 				}
-				// Use paths relative to current working directory (the package directory)
-				const CHANGELOG_PATH = join(process.cwd(), 'CHANGELOG.md')
-				const PACKAGE_PATH = join(process.cwd(), 'package.json')
+				// Use specified working directory or current working directory
+				const workingDir = args['working-dir'] || process.cwd()
+				const CHANGELOG_PATH = join(workingDir, 'CHANGELOG.md')
+				const PACKAGE_PATH = join(workingDir, 'package.json')
 
 				const packageJsonContent = Bun.file(PACKAGE_PATH)
 				const packageJson = await packageJsonContent.json()
