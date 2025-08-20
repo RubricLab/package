@@ -1,3 +1,4 @@
+- [2025-08-20] [bump](https://github.com/RubricLab/package/commit/5ca988108b9c31d10656464b30d558c3c9b64cd8)
 - [2025-08-19] [add optional working directory flag to release flow](https://github.com/RubricLab/package/commit/235280bfdc9e89b59854b4a83906e4fb83854842)
 - [2025-07-01] [run format](https://github.com/RubricLab/package/commit/24386184f8676969165be3b4c991b26b1a90d4a7)
 - [2025-07-01] [consolidate biome format script](https://github.com/RubricLab/package/commit/241b32b724bb39a8aef2a317202063a2d7c60fff)
