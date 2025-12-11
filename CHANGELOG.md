@@ -1,3 +1,4 @@
+- [2025-12-11] [Use NPM to publish with OIDC](https://github.com/RubricLab/package/commit/bd776d6a3b2d4b86481d94e001a216fb3182f7f8)
 - [2025-08-20] [working dir flag](https://github.com/RubricLab/package/commit/f61972a605e6a83e16197d12e8ef8adef0d6d11f)
 - [2025-08-20] [bump](https://github.com/RubricLab/package/commit/5ca988108b9c31d10656464b30d558c3c9b64cd8)
 - [2025-08-19] [add optional working directory flag to release flow](https://github.com/RubricLab/package/commit/235280bfdc9e89b59854b4a83906e4fb83854842)

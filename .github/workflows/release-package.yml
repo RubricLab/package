@@ -1,46 +1,49 @@
 name: Release Package
 
-on: 
+on:
   workflow_call:
     inputs:
       working-directory:
-        description: 'Working directory to run commands in'
+        description: "Working directory to run commands in"
         required: false
         type: string
-        default: '.'
+        default: "."
 
 jobs:
- release:
-  runs-on: ubuntu-latest
-  permissions:
-   contents: read
-   packages: write
-   id-token: write
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
 
-  steps:
-   - name: Checkout code
-     uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-   - name: Setup Bun
-     uses: oven-sh/setup-bun@v2
-     with:
-      bun-version: 'latest'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "latest"
 
-   - name: Install dependencies
-     run: bun install
-     working-directory: ${{ inputs.working-directory }}
+      - name: Install dependencies
+        run: bun install
+        working-directory: ${{ inputs.working-directory }}
 
-   - name: Build (if build script exists)
-     run: |
-      if bun run build &> /dev/null; then
-        bun run build
-      else
-        echo "No build script found, skipping build step"
-      fi
-     working-directory: ${{ inputs.working-directory }}
+      - name: Install the latest version of NPM
+        run: bun install -g npm@latest
 
-   - name: Publish to NPM Packages
-     run: bun publish
-     working-directory: ${{ inputs.working-directory }}
-     env:
-      NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Build (if build script exists)
+        run: |
+          if bun run build &> /dev/null; then
+            bun run build
+          else
+            echo "No build script found, skipping build step"
+          fi
+        working-directory: ${{ inputs.working-directory }}
+
+      - name: Publish to NPM Packages
+        run: npm publish
+        working-directory: ${{ inputs.working-directory }}
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
