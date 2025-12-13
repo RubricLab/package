@@ -45,5 +45,3 @@ jobs:
       - name: Publish to NPM Packages
         run: npm publish --provenance
         working-directory: ${{ inputs.working-directory }}
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}

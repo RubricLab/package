@@ -28,5 +28,5 @@
 	"simple-git-hooks": {
 		"post-commit": "bun run ./cli.ts post-commit"
 	},
-	"version": "0.0.123"
+	"version": "0.0.124"
 }

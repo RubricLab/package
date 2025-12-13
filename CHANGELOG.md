@@ -1,3 +1,4 @@
+- [2025-12-13] [Remove deprecated NPM config token](https://github.com/RubricLab/package/commit/945cb0332989fb78296141b1943fdba0a808689a)
 - [2025-12-11] [Publish with provenance](https://github.com/RubricLab/package/commit/baa86044410c3d7936dfd2c86de780f03e167fc7)
 - [2025-12-11] [Use NPM to publish with OIDC](https://github.com/RubricLab/package/commit/bd776d6a3b2d4b86481d94e001a216fb3182f7f8)
 - [2025-08-20] [working dir flag](https://github.com/RubricLab/package/commit/f61972a605e6a83e16197d12e8ef8adef0d6d11f)
