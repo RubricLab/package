@@ -56,15 +56,12 @@ const cli = createCLI({
 				const packageJsonContent = Bun.file(PACKAGE_PATH)
 				const packageJson = await packageJsonContent.json()
 
-				console.log({ packageJson })
-
 				const versionParts = packageJson.version.split('.').map(Number)
 				versionParts[2] += 1
 				packageJson.version = versionParts.join('.')
 
 				await Bun.write(PACKAGE_PATH, `${JSON.stringify(packageJson, null, 2)}\n`)
 
-				const commitHash = (await $`git rev-parse HEAD`).text().trim()
 				const commitMessage = (await $`git log -1 --pretty=%B`).text().trim()
 				const commitDate = (await $`git log -1 --pretty=%cd --date=short`).text().trim()
 				let repositoryUrl = (await $`git config --get remote.origin.url`).text().trim()
@@ -73,11 +70,12 @@ const cli = createCLI({
 					repositoryUrl = repositoryUrl.slice(0, -4)
 				}
 				if (repositoryUrl.startsWith('git@')) {
-					repositoryUrl = repositoryUrl.replace('git@', 'https://').replace(':', '/')
+					repositoryUrl = repositoryUrl.replace(':', '/').replace('git@', 'https://')
 				}
 
-				const commitUrl = `${repositoryUrl}/commit/${commitHash}`
-				const changelogEntry = `- [${commitDate}] [${commitMessage}](${commitUrl})\n`
+				// This commit's final hash is decided by the amend below, which includes
+				// the changelog itself — so the newest entry cannot carry its own link.
+				const changelogEntry = `- [${commitDate}] ${commitMessage}\n`
 
 				let changelogContent = ''
 				const changelog = Bun.file(CHANGELOG_PATH)
@@ -86,6 +84,20 @@ const cli = createCLI({
 					changelogContent = await changelog.text()
 				} else {
 					changelogContent = '# Changelog\n\n'
+				}
+
+				const parentHash = await $`git rev-parse HEAD^`
+					.text()
+					.then((hash) => hash.trim())
+					.catch(() => null)
+				if (parentHash !== null) {
+					const parentMessage = (await $`git log -1 --pretty=%B HEAD^`).text().trim()
+					const parentDate = (await $`git log -1 --pretty=%cd --date=short HEAD^`).text().trim()
+					const unlinked = `- [${parentDate}] ${parentMessage}\n`
+					if (changelogContent.startsWith(unlinked)) {
+						const linked = `- [${parentDate}] [${parentMessage}](${repositoryUrl}/commit/${parentHash})\n`
+						changelogContent = `${linked}${changelogContent.slice(unlinked.length)}`
+					}
 				}
 
 				await Bun.write(CHANGELOG_PATH, `${changelogEntry}${changelogContent}`)
